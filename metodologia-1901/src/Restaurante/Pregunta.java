@@ -3,19 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package test;
+package Restaurante;
 
 /**
  *
  * @author T-107
  */
 public class Pregunta {
- String titulo;
+ String preg;
  Opcion[]opciones;
  public Pregunta(String x, Opcion[]y){
-     titulo=x;
+     preg=x;
      opciones=y;
  }
 }
-
-

@@ -16,7 +16,10 @@ public class TestResta extends javax.swing.JFrame {
     
     JRadioButton radios[];
     Opcion []opciones;
-    Pregunta p1,p2;
+   
+   Pregunta[]preguntas=new Pregunta[2]; 
+    int indice;
+    
     /**
      * Creates new form TestResta
      */
@@ -55,11 +58,29 @@ public class TestResta extends javax.swing.JFrame {
             
            
            //Para hacer la pregunta, "Primero es de tipo String", el segundo de Tipo Arreglo.
-           p1=new Pregunta("¿Cual es la montaña más alta del mundo",opciones);
+           preguntas[0]=new Pregunta("¿Cual es la montaña más alta del mundo",opciones);
            
-           etiquetaTitulo.setText(p1.preg);
+       
+           
+           
+           
+            //etiquetaTitulo.setText("Todos los siguientes estados tienen costas excepto");
+        Opcion op21=new Opcion("Jalisco", false);
+       
+        Opcion op22=new Opcion("Micoacan ", false);
+        Opcion op23=new Opcion("Coahula", true);
+        Opcion op24=new Opcion("Tamaulipas", false);
+        
+        preguntas[1]=new Pregunta("Todos tienen costas exepto ",opciones);
+           
+         etiquetaTitulo.setText(preguntas[indice].preg);
         for(int i=0;i<radios.length;i++){
-            radios[i].setText(p1.opciones[i].titulo);
+            radios[i].setText(preguntas[indice].opciones[i].titulo);
+        }
+           
+           etiquetaTitulo.setText(preguntas[indice].preg);
+        for(int i=0;i<radios.length;i++){
+            radios[i].setText(preguntas[indice].opciones[i].titulo);
         }
         
         
@@ -187,14 +208,17 @@ public class TestResta extends javax.swing.JFrame {
         }
         
        
-      JOptionPane.showConfirmDialog(this,""+evaluar(p1,indiceSeleccionado));
+      JOptionPane.showConfirmDialog(this,""+evaluar(preguntas[indice],indiceSeleccionado));
+      indice++;
+      
+      
         checar.setEnabled(false);
         siguiente.setEnabled(true);
     }//GEN-LAST:event_checarActionPerformed
 
     private void siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteActionPerformed
         // TODO add your handling code here:
-                etiquetaTitulo.setText("Todos los siguientes estados tienen costas excepto");
+            /*    etiquetaTitulo.setText("Todos los siguientes estados tienen costas excepto");
         Opcion op1=new Opcion("El Popocatepelt", false);
        //System.out.println("Tu titulo es "+op1.titulo); 
         //System.out.println("Es correcta" +op1.correcta);  
@@ -208,8 +232,14 @@ public class TestResta extends javax.swing.JFrame {
            etiquetaTitulo.setText(p2.preg);
         for(int i=0;i<radios.length;i++){
             radios[i].setText(p2.opciones[i].titulo);
+        }*/
+        
+               etiquetaTitulo.setText(preguntas[indice].preg);
+        for(int i=0;i<radios.length;i++){
+            radios[i].setText(preguntas[indice].opciones[i].titulo);
         }
-          siguiente.setEnabled(false);
+            
+            siguiente.setEnabled(false);
         checar.setEnabled(true);
         
     }//GEN-LAST:event_siguienteActionPerformed

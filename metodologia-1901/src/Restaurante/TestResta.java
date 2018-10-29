@@ -31,8 +31,8 @@ public class TestResta extends javax.swing.JFrame {
         
         
         //Generamos en un arreglo los radios button visuales
-        radios=new JRadioButton[4];
-        opciones=new Opcion[4];
+        radios=new JRadioButton[5];
+        opciones=new Opcion[5];
         radios[0]=radioOp1;
         radios[1]=radioOp2;
         radios[2]=radioOp3;
@@ -63,7 +63,7 @@ public class TestResta extends javax.swing.JFrame {
        
            
            
-           
+            Opcion [] opciones2 = new  Opcion [ 4 ];
             //etiquetaTitulo.setText("Todos los siguientes estados tienen costas excepto");
         Opcion op21=new Opcion("Jalisco", false);
        
@@ -71,7 +71,7 @@ public class TestResta extends javax.swing.JFrame {
         Opcion op23=new Opcion("Coahula", true);
         Opcion op24=new Opcion("Tamaulipas", false);
         
-        preguntas[1]=new Pregunta("Todos tienen costas exepto ",opciones);
+        preguntas[1]=new Pregunta("Todos tienen costas exepto ",opciones2);
            
          etiquetaTitulo.setText(preguntas[indice].preg);
         for(int i=0;i<radios.length;i++){

@@ -14,7 +14,7 @@ public class Banco {
     public static void main(String[] args ){
     
    
-    TarjetaCredito t1=new TarjetaCredito();
+   /* TarjetaCredito t1=new TarjetaCredito();
 
      t1.setNumero(666);
     
@@ -29,7 +29,31 @@ public class Banco {
            //
         System.out.println("El numero de la carpeta t3 es "+t1.getNumero());
       
-    
+    */
+   
+   TarjetaCredito tcredito=new  TarjetaCredito();
+   
+   tcredito.setNumero(1234);
+  tcredito.setNombre("Banamex");
+  tcredito.setTipo("Credito");
+   
+   
+   TarjetaAhorro tahorro=new  TarjetaAhorro();
+   
+   tahorro.setNumero(4321);
+    tahorro.setNombre("Bancomer");
+     tahorro.setTipo("Ahorro");
+   
+   TarjetaNomina tnom=new TarjetaNomina();
+   tnom.setNumero(1020);
+   tnom.setNombre("Hsbc");
+   tnom.setTipo("Nomina");
+   
+   
+   
+   
+   
+   
     }
     
 }

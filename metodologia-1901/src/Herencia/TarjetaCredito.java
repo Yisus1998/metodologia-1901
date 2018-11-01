@@ -9,10 +9,17 @@ package Herencia;
  *
  * @author T-107
  */
-public class TarjetaCredito {
+public class TarjetaCredito extends Tarjeta {
+
+    @Override
+    public void pagar() {
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
-    /*private */ private int numero; 
+    
+    
+    // private int numero; 
     
    /* public void setNumero(int x){
    //if (x<0)x=-x;
@@ -37,17 +44,18 @@ public class TarjetaCredito {
     /**
      * @return Este metodo te regrea el valor del numero de tu tarjeta
      */
-    public int getNumero() {
+   /* public int getNumero() {
         return numero;
     }
 
     /**
      * @param numero Aqui debes introducir en los pararentesis n valor del numero de la tarjeta
      */
-    public void setNumero(int numero) {
+   /* public void setNumero(int numero) {
         this.numero = numero;
     }
    
-    
+    */
+
     
 }

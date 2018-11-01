@@ -9,6 +9,18 @@ package Herencia;
  *
  * @author T-107
  */
-public class TarjetaAhorro {
-      private int numero; 
+public class TarjetaAhorro extends Tarjeta {
+
+    @Override
+    public void pagar() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   
+    
+    }
+ //     private int numero; 
+    
+    
+    
+    
+    
 }

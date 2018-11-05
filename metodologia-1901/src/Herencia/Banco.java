@@ -31,24 +31,52 @@ public class Banco {
       
     */
    
-   TarjetaCredito tcredito=new  TarjetaCredito();
+   TarjetaCredito tcredito=new  TarjetaCredito() {};
    
    tcredito.setNumero(1234);
   tcredito.setNombre("Banamex");
   tcredito.setTipo("Credito");
+   tcredito.setSaldo(100);
    
-   
-   TarjetaAhorro tahorro=new  TarjetaAhorro();
+   TarjetaAhorro tahorro=new  TarjetaAhorro() {};
    
    tahorro.setNumero(4321);
     tahorro.setNombre("Bancomer");
      tahorro.setTipo("Ahorro");
+   tahorro.setSaldo(100);
    
-   TarjetaNomina tnom=new TarjetaNomina();
+   
+   TarjetaNomina tnom=new TarjetaNomina() {};
    tnom.setNumero(1020);
    tnom.setNombre("Hsbc");
    tnom.setTipo("Nomina");
+   tnom.setSaldo(100);
    
+   //Gennerar el codigo del deposito
+   //vamos a hacerlo de la forma mas basica
+   
+  /* tnom.pagar(150);
+   
+   tahorro.pagar(150);
+   
+   tcredito.pagar(150);
+   */
+   //Generar un arreglo de tarjetas
+   
+   Tarjeta tarjetas[]=new Tarjeta[3];
+   tarjetas[0]=tnom;
+   tarjetas[1]=tahorro;
+   tarjetas[2]=tcredito;
+
+   //Iteramos el arreglo
+   
+   for(Tarjeta t: tarjetas){
+       
+      // t.pagar(150);
+       System.out.println("Saldo es " + t.getSaldo()+ " Tipo " +t.getTipo());
+   
+       
+   }
    
    
    

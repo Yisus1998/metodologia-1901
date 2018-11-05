@@ -9,11 +9,14 @@ package Herencia;
  *
  * @author T-107
  */
-public class TarjetaNomina extends Tarjeta{
+public abstract class TarjetaNomina extends Tarjeta{
 
-    @Override
-    public void pagar() {
+   
+    public void pagar(float deposito) {
       //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+ 
+     
+   setSaldo(getSaldo()+deposito);
     }
    //  private int numero;
      
